@@ -1,4 +1,4 @@
-import { Children, FC, PropsWithChildren, useState } from 'react';
+import { Children, FC, PropsWithChildren, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import ArrowActive from '@/assets/arrow-active.svg';
 import ArrowDisabled from '@/assets/arrow-disabled.svg';
@@ -9,17 +9,20 @@ const Carousel: FC<PropsWithChildren> = ({ children }) => {
   const total = Children.count(children);
   const [active, setActive] = useState(0);
 
+  useEffect(() => {
+    setIndex(active * -260);
+  }, [active]);
+
   const handleScrollLeft = () => {
     if (active !== 0) {
       setActive(state => state - 1);
-      setIndex((active - 1) * -260);
+
     }
   };
 
   const handleScrollRight = () => {
     if (active < total - 1) {
       setActive(state => state + 1);
-      setIndex((active + 1) * -260);
     }
   };
 
