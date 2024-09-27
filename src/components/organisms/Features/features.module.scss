@@ -1,0 +1,64 @@
+@use '@/styles/colors' as *;
+@use '@/styles/mixins' as *;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 34px;
+  margin-bottom: 45px;
+
+  &-image {
+    width: 100%;
+    max-width: 275px;
+    margin-bottom: 28px;
+  }
+
+  &-text {
+    width: 100%;
+    max-width: 264px;
+
+    h2 {
+      color: $gray;
+      font-size: 19px;
+      line-height: 23px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 18px;
+      color: $text;
+    }
+  }
+
+  @include responsive {
+    flex-direction: row;
+    padding: 0 74px;
+    margin-bottom: 75px;
+
+    &-image {
+      max-width: 510px;
+      margin-bottom: 0;
+    }
+
+    &-text {
+      max-width: 408px;
+
+      h2 {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

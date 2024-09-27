@@ -1,0 +1,16 @@
+@use '@/styles/mixins' as *;
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  &-fluid {
+    max-width: none;
+  }
+
+  @include responsive {
+    padding: 0;
+  }
+}

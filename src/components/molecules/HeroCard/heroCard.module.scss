@@ -1,0 +1,66 @@
+@use '@/styles/colors' as *;
+@use '@/styles/mixins' as *;
+
+.hero-card {
+  margin-top: 28px;
+
+  &-content {
+    width: 330px;
+    display: flex;
+    padding: 20px 16px;
+    justify-content: space-between;
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      &_description {
+        margin-left: 13px;
+
+        span {
+          color: $gray;
+          font-size: 11px;
+          font-weight: 600;
+          margin-bottom: 3px;
+        }
+
+        h4 {
+          color: $vgray;
+          font-size: 9px;
+        }
+      }
+    }
+
+    &-separator {
+      width: 1px;
+      height: 40px;
+      border-left: 1px solid #AEAEAE;
+    }
+  }
+
+  @include responsive {
+    margin-top: 60px;
+
+    &-content {
+      width: 820px;
+      padding: 34px 48px;
+
+      &-item {
+        &_description {
+          margin-left: 23px;
+
+          span {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+          }
+
+          h4 {
+            color: $vgray;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

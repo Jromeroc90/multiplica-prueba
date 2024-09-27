@@ -1,0 +1,117 @@
+@use '@/styles/colors' as *;
+@use '@/styles/mixins' as *;
+
+.footer {
+  flex-direction: column-reverse;
+  display: flex;
+
+  &-container {
+    padding: 33px 20px;
+    background-color: $bg;
+  }
+
+  &-block {
+    width: 100%;
+    text-align: center;
+    margin-top: 51px;
+
+    &-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 24px;
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 11px;
+      }
+
+      p {
+        font-size: 18px;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    &-description {
+      color: $text;
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    &-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+
+    &-col {
+      span {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        color: $mgray;
+        margin-bottom: 16px;
+      }
+
+      ul li {
+        color: $vgray;
+        font-size: 13px;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @include responsive {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    &-container {
+      padding: 60px 0;
+    }
+
+    &-block {
+      max-width: 337px;
+      text-align: left;
+      margin-top: 0;
+
+      &-links {
+        justify-content: flex-start;
+      }
+    }
+
+    &-nav {
+      justify-content: flex-start;
+
+      &-col {
+        margin-right: 94px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        span {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+
+        ul li {
+          font-size: 15px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/colors' as *;
+
+.plans {
+  width: 100%;
+
+  &-head {
+    width: 100%;
+    max-width: 258px;
+    margin: 0 auto 30px;
+
+    h2 {
+      color: $gray;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 21px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    p {
+      color: $text;
+      font-size: 10px;
+      line-height: 12px;
+      text-align: center;
+    }
+  }
+
+  &-carousel-container {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @include responsive {
+    &-head {
+      max-width: 559px;
+      margin: 0 auto 40px;
+
+      h2 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+    &-carousel-container {
+      max-width: 1000px;
+    }
+  }
+}

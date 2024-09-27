@@ -1,0 +1,91 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/colors' as *;
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+
+  &-wrapper {
+    width: 1350px;
+    display: flex;
+    padding: 0 16px;
+  }
+
+  &-controls {
+    display: flex;
+    margin-top: 21px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    &-dots {
+      display: flex;
+      align-items: center;
+
+      &_dot {
+        width: 9px;
+        height: 9px;
+        background-color: #D8D8D8;
+        border-radius: 50px;
+        margin-right: 6px;
+        cursor: pointer;
+
+        &.active {
+          width: 38px;
+          background-color: $primary;
+          margin-right: 9px;
+        }
+      }
+    }
+
+    &-arrows {
+      display: inline-flex;
+      align-items: center;
+
+      &_arrow {
+        width: 30px;
+        height: 30px;
+        margin-right: 28px;
+        cursor: pointer;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        img.rotate {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  @include responsive {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    &-wrapper {
+      width: 2060px;
+      padding: 0;
+      justify-content: space-between;
+    }
+
+    &-controls {
+      width: 100%;
+      padding: 0;
+      max-width: 1240px;
+      margin: 27px auto 0;
+
+      &-dots {
+        &_dot {
+          width: 13px;
+          height: 13px;
+
+          &.active {
+            width: 58px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/colors' as *;
+
+.testimonials {
+  width: 100%;
+  position: relative;
+  margin: 50px 0 30px;
+
+  &-head {
+    width: 100%;
+    max-width: 258px;
+    margin: 0 auto 40px;
+
+    h2 {
+      color: $gray;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 35px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    p {
+      color: $text;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+    }
+  }
+
+  &-carousel-container {
+    margin-bottom: 58px;
+  }
+
+  @include responsive {
+    margin: 104px 0 0;
+    padding-bottom: 265px;
+
+    &-head {
+      max-width: 559px;
+    }
+
+    &-carousel-container {
+      margin-bottom: 0;
+    }
+  }
+}

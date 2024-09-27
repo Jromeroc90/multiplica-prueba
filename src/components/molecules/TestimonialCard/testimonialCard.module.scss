@@ -1,0 +1,118 @@
+@use '@/styles/colors' as *;
+@use '@/styles/mixins' as *;
+
+.testimonial-card {
+  width: 258px;
+  padding: 13px 26px;
+  border-radius: 20px;
+  border: 1px solid $cardBorder;
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+
+    &-image {
+      width: 41px;
+      margin-right: 18px;
+    }
+
+    &-data {
+      flex: 1;
+
+      h3 {
+        color: $gray;
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      &_user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          color: $text;
+          font-size: 10px;
+          line-height: 12px;
+        }
+
+        span {
+          display: inline-flex;
+          align-items: center;
+          color: $text;
+          font-size: 10px;
+          line-height: 12px;
+          font-weight: 500;
+
+          img {
+            width: 10px;
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  &-text p {
+    color: $text;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  @include responsive {
+    width: 404px;
+    padding: 20px 40px;
+    margin: 0;
+
+    &-head {
+      margin-bottom: 21px;
+
+      &-image {
+        width: 64px;
+        margin-right: 28px;
+      }
+
+      &-data {
+        h3 {
+          font-size: 18px;
+          line-height: 21px;
+          margin-bottom: 6px;
+        }
+
+        &_user {
+          p {
+            font-size: 15px;
+            line-height: 18px;
+          }
+
+          span {
+            font-size: 15px;
+            line-height: 18px;
+
+            img {
+              width: 15px;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &-text p {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

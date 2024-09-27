@@ -1,0 +1,52 @@
+@use 'sass:color';
+@use '@/styles/colors' as *;
+@use '@/styles/mixins' as *;
+
+.button {
+  border-radius: 20px;
+  color: $white;
+  background-color: $primary;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  transition: 400ms all;
+
+  &-sm {
+    font-size: 11px;
+    padding: 6px 30px;
+    font-weight: 500;
+  }
+
+  &-md {
+    font-size: 12px;
+    padding: 10px 29px;
+  }
+
+  &-lg {
+    font-size: 18px;
+    padding: 18px 57px;
+  }
+
+  &:hover {
+    background-color: color.adjust($primary, $lightness: -5%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include responsive {
+    font-size: 18px;
+    line-height: 21px;
+
+    &-sm {
+      font-size: 20px;
+      padding: 10px 55px;
+    }
+
+    &-md {
+      font-size: 18px;
+      padding: 16px 45px;
+    }
+  }
+}

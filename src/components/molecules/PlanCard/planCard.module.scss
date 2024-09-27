@@ -1,0 +1,101 @@
+@use '@/styles/mixins' as *;
+@use '@/styles/colors' as *;
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  padding: 11px 30px;
+  border-radius: 20px;
+  border: 2px solid $cardBorder;
+  justify-content: space-between;
+  transition: 400ms all;
+  margin: 0 8px;
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  &-image {
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  h3 {
+    color: $gray;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 600;
+    margin: 21px 0 30px;
+    text-align: center;
+  }
+
+  &-bottom {
+    text-align: center;
+    margin-top: 31px;
+
+    p {
+      color: $gray;
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+
+      span {
+        color: $vgray;
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 400;
+
+        &.slash {
+          font-size: 15px;
+          line-height: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @include responsive {
+    width: 320px;
+    padding: 21px 56px;
+    margin: 0;
+
+    &-image {
+      img {
+        width: 146px;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 40px 0 55px;
+    }
+
+    &-bottom {
+      margin-top: 17px;
+
+      p {
+        font-size: 28px;
+        line-height: 33px;
+        margin-bottom: 22px;
+
+        span {
+          font-size: 20px;
+          line-height: 24px;
+
+          &.slash {
+            font-size: 28px;
+            line-height: 33px;
+          }
+        }
+      }
+    }
+  }
+}

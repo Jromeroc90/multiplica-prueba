@@ -1,0 +1,133 @@
+@use '@/styles/colors' as *;
+@use '@/styles/mixins' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+
+  &-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 50;
+    background-color: $white;
+  }
+
+  &-block {
+    display: flex;
+    align-items: center;
+
+    &-mobile {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 11px;
+    }
+
+    p {
+      font-size: 15px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-menu {
+    width: 24px;
+    cursor: pointer;
+  }
+
+  &-nav {
+    display: none;
+    margin-left: 120px;
+
+    ul {
+      display: flex;
+
+      li {
+        color: $gray;
+        font-size: 16px;
+        margin-right: 56px;
+
+        a:focus {
+          outline: none;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &-actions {
+    display: none;
+    align-items: center;
+
+    &-button {
+      color: $gray;
+      padding: 8px 22px;
+      border-color: transparent;
+      border-width: 2px;
+      border-radius: 20px;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:first-child {
+        margin-right: 16px;
+      }
+
+      &-border {
+        color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
+  @include responsive {
+    &-block {
+      &-mobile {
+        width: auto;
+        justify-content: flex-start;
+      }
+    }
+
+    &-logo {
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+
+    &-menu {
+      display: none;
+    }
+
+    &-nav {
+      display: block;
+    }
+
+    &-actions {
+      display: flex;
+    }
+  }
+}

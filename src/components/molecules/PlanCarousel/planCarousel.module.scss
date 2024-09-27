@@ -1,0 +1,21 @@
+@use '@/styles/mixins' as *;
+
+.plan-carousel {
+  width: 100%;
+  overflow: auto;
+  padding: 0 60px;
+
+  &-wrapper {
+    width: 543px;
+    display: flex;
+  }
+
+  @include responsive {
+    padding: 0;
+
+    &-wrapper {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}

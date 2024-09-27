@@ -1,0 +1,13 @@
+@use '@/styles/colors' as *;
+
+.card {
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: 7px 13px 35px 0 #00000017;
+
+  &.shadow-high {
+    box-shadow: 12px 18px 54px 0 #0000001C;
+  }
+}

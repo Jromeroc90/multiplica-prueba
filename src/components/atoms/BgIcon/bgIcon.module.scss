@@ -1,0 +1,27 @@
+@use '@/styles/colors' as *;
+@use '@/styles/mixins' as *;
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 50px;
+  background-color: $iconBg;
+
+  img {
+    width: 14px;
+    height: 14px;
+  }
+
+  @include responsive {
+    width: 37px;
+    height: 37px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
